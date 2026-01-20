@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+package-lock.json # Optional: Keep this if you want to lock versions, remove if you don't
+
+# Environment Variables (SECURITY RISK - DO NOT UPLOAD)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example # You can keep this one if it only has empty keys
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Operating System Junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+coverage/
+
+# Build (If you switch to TypeScript later)
+dist/
+build/

@@ -1,0 +1,29 @@
+{
+  "name": "claimdrop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.17.13",
+    "@mui/icons-material": "^7.3.7",
+    "@supabase/supabase-js": "^2.90.1",
+    "framer-motion": "^12.27.1",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "tailwindcss": "^4"
+  }
+}
