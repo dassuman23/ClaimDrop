@@ -17,5 +17,5 @@ app.use('/api/receivers', receiverRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 ClaimDrop Logistics Server (ESM) running on port ${PORT}`);
+  console.log(`ClaimDrop Server running on port ${PORT}`);
 });

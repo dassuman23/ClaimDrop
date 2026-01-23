@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ReceiverDashboard({ onClaimSuccess }) {
   const [drops, setDrops] = useState([]);
-  const [claimingId, setClaimingId] = useState(null); // Tracks which specific drop is processing
+  const [claimingId, setClaimingId] = useState(null);
 
   useEffect(() => {
     loadDrops();
@@ -17,13 +17,13 @@ export default function ReceiverDashboard({ onClaimSuccess }) {
   };
 
   const handleClaim = async (dropId) => {
-    setClaimingId(dropId); // Start loading for this specific ID
+    setClaimingId(dropId);
     try {
       const result = await claimDrop(dropId);
       onClaimSuccess(result.drop); 
     } catch (err) {
       alert(err.message);
-      setClaimingId(null); // Only reset if error (success usually unmounts/moves the item)
+      setClaimingId(null);
     }
   };
 
@@ -46,7 +46,7 @@ export default function ReceiverDashboard({ onClaimSuccess }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.3, delay: index * 0.05 }} // Staggered effect
+            transition={{ duration: 0.3, delay: index * 0.05 }}
             className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
           >
             {/* Card Header */}

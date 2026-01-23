@@ -35,14 +35,11 @@ const fetchWithAuth = async (endpoint, options = {}, token = null) => {
     return response.json();
 };
 
-// --- RECEIVER ENDPOINTS ---
-
-// Fetch all available food drops for the map/list
 export const getAvailableDrops = () => {
     return publicFetch('/api/receivers/available');
 };
 
-// Claim a specific drop (Requires Auth to know who is claiming)
+
 export const claimDrop = (dropId) => {
     return fetchWithAuth('/api/receivers/claim', {
         method: 'POST',
@@ -50,7 +47,7 @@ export const claimDrop = (dropId) => {
     });
 };
 
-// Verify the OTP handshake at the store
+
 export const verifyPickup = (dropId, otp) => {
     return fetchWithAuth('/api/receivers/verify', {
         method: 'POST',
@@ -66,10 +63,17 @@ export const getMyDrops = () => {
     return fetchWithAuth('/api/donors/my-drops');
 };
 
-// Create a new drop (This triggers the backend OTP generation)
+
 export const createDrop = (dropData) => {
     return fetchWithAuth('/api/donors/drop', {
         method: 'POST',
         body: JSON.stringify(dropData)
+    });
+};
+
+export const updateStoreLocation = (coordinates) => {
+    return fetchWithAuth('/api/donors/location', {
+        method: 'POST',
+        body: JSON.stringify(coordinates)
     });
 };

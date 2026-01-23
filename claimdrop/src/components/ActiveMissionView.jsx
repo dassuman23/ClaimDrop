@@ -176,7 +176,7 @@ export default function ActiveMissionView({ activeDrop, onMissionComplete }) {
         <div className="h-16 w-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
           <ShieldCheck className="text-green-600" size={32} />
         </div>
-        <h4 className="text-2xl font-black text-slate-900 mb-2">Security Handshake</h4>
+        <h4 className="text-2xl font-black text-slate-900 mb-2">Security Code</h4>
         <p className="text-slate-500 mb-10 text-sm px-4 leading-relaxed">
           Ask the manager for the <span className="text-slate-900 font-bold">4-digit pickup code</span> to verify the collection of {activeDrop.title}.
         </p>

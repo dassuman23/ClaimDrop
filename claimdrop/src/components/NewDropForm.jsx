@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-// Import the new service instead of direct Supabase
 import { createDrop } from '@/api/publicService'; 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Package, Clock, X } from 'lucide-react';
@@ -21,8 +20,6 @@ export default function NewDropForm({ onComplete, onClose }) {
     setLoading(true);
 
     try {
-      // We no longer calculate time or insert directly here.
-      // We send the raw data to the server-side controller.
       const result = await createDrop(formData);
 
       if (result.success) {
@@ -52,7 +49,7 @@ export default function NewDropForm({ onComplete, onClose }) {
         {success ? (
           <div className="p-12 text-center">
             <DotLottieReact
-              src="/animations/success.lottie" // Replace with a valid checkmark Lottie URL
+              src="/animations/success.lottie"
               autoplay
               loop={false}
               className="h-32 w-32 mx-auto"
